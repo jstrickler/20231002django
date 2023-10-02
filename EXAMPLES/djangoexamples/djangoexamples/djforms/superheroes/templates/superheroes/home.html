@@ -1,0 +1,12 @@
+{% extends "superheroes/superheroes_base.html" %}
+{% block content %}
+<div class="container">
+<h1>{{ message }}</h1>
+<h3><a href="{% url 'superheroes:demoform' %}">Demo Form</a></h3>
+<h3><a href="{% url 'superheroes:heroform' %}">Hero Form</a></h3>
+<h3><a href="{% url 'superheroes:heroadd' %}">Hero Add Form</a></h3>
+<h3><a href="{% url 'superheroes:herolist' %}">Hero List</a></h3>
+
+</div>
+{% endblock content %}
+

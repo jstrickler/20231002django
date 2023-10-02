@@ -1,0 +1,6 @@
+cookiecutter
+django >= 4.0
+django-crispy_forms
+django-debug-toolbar
+pytest-django
+pyyaml
