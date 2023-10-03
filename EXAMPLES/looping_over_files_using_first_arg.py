@@ -1,6 +1,6 @@
 import sys
 
-first_arg = sys.argv.pop(1)
+first_arg = sys.argv.pop(1)  # Grab first value after script name...
 
 print(f"first arg is '{first_arg}'")
 for file_path in sys.argv[1:]:  # skip script name
