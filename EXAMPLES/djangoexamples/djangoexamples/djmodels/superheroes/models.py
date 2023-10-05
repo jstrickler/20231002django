@@ -1,7 +1,9 @@
 from django.db import models
 
 
+#            base class
 class Power(models.Model):
+    # magic properties
     name = models.CharField(max_length=32, unique=True)
     description = models.CharField(max_length=512)
 

@@ -40,6 +40,9 @@ def square_area(side):
     """
     return side ** 2
 
+def _private_thing():
+    print("Hey! I'm private! What are you doing here?")
+
 if __name__ == "__main__":
     area1 = square_area(15)
     print(f"area1: {area1}")
