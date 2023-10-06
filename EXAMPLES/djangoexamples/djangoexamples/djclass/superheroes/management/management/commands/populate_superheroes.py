@@ -7,7 +7,7 @@ class Command(BaseCommand):
     help = "Populates the superhero database"
 
     def handle(self, *args, **options):
-        with open("/Users/jstrick/curr/courses/python/common/DATA/superheroes.yaml") as sup_in:
+        with open("../../../DATA/superheroes.yaml") as sup_in:
             sup_data = yaml.load(sup_in, Loader=yaml.BaseLoader)
 
         for s in sup_data:

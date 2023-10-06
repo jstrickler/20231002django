@@ -31,8 +31,17 @@ def demoform(request):
     invalid = False
 
     if request.method == 'POST':  # if form is bound (i.e., filled in)
+        # cleaning methods called here....
         form = DemoForm(request.POST)
-        if form.is_valid():
+        if form.is_valid():  # launch validators and cleaners   
+            # cleaned_data = form.clean()
+            #                  to_python()
+            #                  run_validators()
+            #                      validate()
+            # new_value = clean_email()
+            # new_data = clean_date() 
+            #
+            #  value = cleaned_data['fieldname']
             # if data is valid, show results page
             context = {
                     'page_title': 'Form Fields Results',
@@ -42,7 +51,7 @@ def demoform(request):
         else:
             # show form with errors for correcting
             invalid = True
-    else:
+    else: 
         form = DemoForm() # unbound (not filled in) form
 
     # unless POST/valid, redraw form
@@ -98,6 +107,8 @@ def heroadd(request):
     if request.method == 'POST':
         form = HeroModel(request.POST)
         if form.is_valid():
+            # s = Superhero(name=form.cleaned_data['name'], ...)
+            # s.save()
             form.save()  # write data to DB
             context = {
                 'page_title': 'Hero Details',
