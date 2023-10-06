@@ -23,3 +23,6 @@ def hero(request, hero_name):
         "{} is really {}".format(s.secret_identity, s.name)
     )
 
+def multi(request, this_thing, that_thing):
+    return HttpResponse(f"this thing: {this_thing} that thing: {that_thing}")
+

@@ -1,8 +1,13 @@
 {% extends "superheroes/superheroes_base.html" %}
 
 {% block css %}
-    {{ block.super }}
+    {{ block.super }}  {# not SUPERman #}   {# like method.super() in a class #}
     <style>.blue { color: blue; } .red { color: red; }</style>
+{% endblock css %}
+
+{% block javascript %}
+{{ block.super }}
+<!-- custom js -->
 {% endblock %}
 
 {% block content %}
@@ -38,3 +43,7 @@ in the page
 
 {% endblock content %}
 
+{% block footer %}
+{{ block.super }}
+<h2>I am the footer!</h2>
+{% endblock %}

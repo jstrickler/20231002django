@@ -20,6 +20,7 @@ def hero_hard_way(request, hero_name):
         'hero_name': hero.name,
         'real_name': hero.real_name,
         'secret_identity': hero.secret_identity,
+        # 'browser': request.browser,
     }
     t = get_template('superheroes/hero_basic.html')
     page = t.render(data)
